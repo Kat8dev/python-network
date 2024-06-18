@@ -1,0 +1,23 @@
+{% extends "network/layout.html" %} {% block body %}
+<h2 class="m-3">All Posts</h2>
+{% if user.is_authenticated %}
+<section class="card container">
+    <form method="post" id="compose-post">
+      <div class="card-body">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="content">New Post</label>
+          <textarea
+            id="content"
+            class="form-control"
+            name="content"
+            placeholder="What's on your mind?"
+          ></textarea>
+          <input class="btn btn-primary mt-3" type="submit" value="Post" />
+        </div>
+      </div>
+</section>
+</form>
+{% endif %}
+<section class="container mt-5" id="all-posts"></section>
+{% endblock %}

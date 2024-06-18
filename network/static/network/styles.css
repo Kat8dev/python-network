@@ -1,0 +1,10 @@
+.icon {
+    cursor: pointer;
+    color: rgb(206, 25, 25);
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: rgb(255, 0, 0);
+}
+
